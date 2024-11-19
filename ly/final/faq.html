@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Часто задаваемые вопросы о паломничестве Умра и Хадж">
+    <title>Вопросы - ответы</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KEMEL Travel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button id="changeColorBtn" class="btn-theme">Тема</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pilgrimage.html">Поломничество</a></li>
+                    <li class="nav-item"><a class="nav-link" href="holyplaces.html">Тур</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="auth.html">Профиль</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h2>Часто задаваемые вопросы (FAQ)</h2>
+                <div class="faq-item">
+                    <h3 class="faq-question">1. Какие документы необходимы для совершения Умры?</h3>
+                    <p class="faq-answer">Для совершения Умры вам понадобится действующий заграничный паспорт, виза на Умру.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">2. Какой лучший сезон для совершения Хаджа?</h3>
+                    <p class="faq-answer">Хадж совершается в месяце Зуль-Хиджа по исламскому календарю. Рекомендуется заранее освободить график для поездки.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">3. Сколько времени занимает совершение Умры?</h3>
+                    <p class="faq-answer">Обычно Умра занимает от 4 до 7 дней, включая перелет, пребывание в Мекке и Медине, а также выполнение всех необходимых обрядов.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">4. Какие требования к здоровью для паломников?</h3>
+                    <p class="faq-answer">Паломники должны быть физически готовыми к выполнению обрядов Хаджа и Умры. Рекомендуется проконсультироваться с врачом перед поездкой и иметь при себе необходимые лекарства.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">5. Можно ли совершить Умру несколько раз в жизни?</h3>
+                    <p class="faq-answer">Да, Умру можно совершать неограниченное количество раз в жизни, в отличие от Хаджа, который является обязательным лишь один раз, при наличии возможности.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">6. Какие услуги предоставляет ваше агентство?</h3>
+                    <p class="faq-answer">Наше агентство предлагает полный комплекс услуг: оформление визы, бронирование авиабилетов и проживания, трансферы, сопровождение на протяжении всего паломничества, а также консультации и поддержку 24/7.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">7. Как забронировать поездку?</h3>
+                    <p class="faq-answer">Для бронирования поездки свяжитесь с нами через контактную форму на сайте, по телефону или электронной почте. Наши специалисты помогут подобрать подходящий пакет и оформить все необходимые документы.</p>
+                </div>
+            <h2><br>Отправьте нам свой вопрос<br></h2>
+            <form id="faqForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Имя</label>
+                    <input type="text" id="name" class="form-control" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Номер телефона</label>
+                    <input type="tel" id="phone" class="form-control" name="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="question" class="form-label">Ваш вопрос</label>
+                    <textarea id="question" class="form-control" name="question" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="button" id="resetForm" class="btn btn-secondary">Сбросить</button>
+            </form>
+            <p id="responseMessage"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 KEMEL Travel. Все права защищены.</p>
+        <p>Shyntasov Abdurahman, Nurmukhammed Seitkhan</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

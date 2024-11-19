@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Паломническое турагентство для организации Хаджа и Умры">
+    <title>Главная страница</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KEMEL Travel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button id="changeColorBtn" class="btn-theme">Тема</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pilgrimage.html">Поломничество</a></li>
+                    <li class="nav-item"><a class="nav-link" href="holyplaces.html">Тур</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="auth.html">Профиль</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="section-container">
+            <div class="container mt-5">
+                <div class="card" style="max-width: 1000px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="photo_2024-09-10 18.15.06.jpeg" class="img-fluid rounded-start" alt="Placeholder Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text"><h2>О нас</h2>
+                                    <p>
+                                        Компания KEMEL Travel более пяти лет организует паломничества в важнейшие религиозные места мира, обеспечивая комфорт и безопасность на каждом этапе путешествия.
+                                    </p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section>
+            <p>
+                Мы берем на себя оформление визы в Саудовскую Аравию, бронирование отелей и разработку уникальных мероприятий, таких как экспедиции по святым местам. Наши туры включают посещение знаковых точек, имеющих важное религиозное значение, чтобы сделать ваше паломничество поистине незабываемым и насыщенным духовным опытом.
+            </p>
+            <p>
+                Мы гордимся нашим опытом и вниманием к деталям, чтобы вы могли сосредоточиться на своей духовной практике, а мы займемся остальным.
+            </p>
+        </section> 
+        <section>
+            <div id="dateTimeDisplay"></div> 
+        </section>
+        <button class="open-form-btn" onclick="openForm()">Открыть форму обратной связи</button>
+        <div class="overlay" id="overlay" onclick="closeForm()"></div>
+        <div class="popup" id="popupForm">
+            <button class="close-btn" onclick="closeForm()">×</button>
+            <h2>Форма обратной связи</h2>
+            <form id="feedbackForm">
+                <input type="text" id="feedbackName" placeholder="Ваше имя" required>
+                <input type="email" id="feedbackEmail" placeholder="Ваш email" required>
+                <textarea id="feedbackMessage" placeholder="Ваше сообщение" rows="4" required></textarea>
+                <div class="g-recaptcha" data-sitekey="6LcSyYMqAAAAAPc8WpqRyaabAq9ORKVKb5N_FjCC"></div>
+                <button type="clear">Отправить</button>
+            </form>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 KEMEL Travel. Все права защищены.</p>
+        <p>Shyntasov Abdurahman, Nurmukhammed Seitkhan</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
